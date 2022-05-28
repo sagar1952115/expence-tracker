@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 const AddTransaction = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState("");
   const { addTransaction } = useContext(GlobalContext);
 
   const handleSubmit = (e) => {
@@ -13,7 +13,7 @@ const AddTransaction = () => {
       amount: +amount,
     };
     setText("");
-    setAmount();
+    setAmount("");
     addTransaction(newData);
   };
 

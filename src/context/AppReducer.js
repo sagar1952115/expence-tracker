@@ -1,4 +1,4 @@
-export default (state, action) => {
+const reducer = (state, action) => {
   let newtodo = null;
   switch (action.type) {
     case "INITIALISE":
@@ -25,3 +25,4 @@ export default (state, action) => {
       return state;
   }
 };
+export default reducer;
